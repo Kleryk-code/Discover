@@ -1,0 +1,47 @@
+.tours {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.tours__title {
+    margin-bottom: 70px;
+}
+
+.tours__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.tours__item {
+    background-color: red;
+    flex-grow: 0;
+    flex-basis: 24%;
+    margin-bottom: 2%;
+}
+
+.tours__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+@media(max-width: 1000px) {
+    .tours__item {
+        flex-basis: 32%;
+    }
+}
+
+@media(max-width: 800px) {
+    .tours__item {
+        flex-basis: 49%;
+    }
+}
+
+@media(max-width: 420px) {
+    .tours__item {
+        flex-basis: 100%;
+    }
+}

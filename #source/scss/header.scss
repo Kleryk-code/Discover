@@ -1,0 +1,145 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+}
+
+.nav__link {
+    display: block;
+    color: $dark-font;
+    text-transform: uppercase;
+    padding: 50px 24px;
+    background-color: transparent;
+
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+
+    transition: all ease-in 0.25s;
+
+    &:hover,
+    &:focus {
+        color: $light-font;
+        background-color: $nav-tab;
+        outline: none;
+    }
+
+    &:active {
+        background-color: lighten($nav-tab, 15%);
+        outline: none;
+    }
+
+    &--active {
+        color: $light-font;
+        background-color: $nav-tab; 
+    }
+}
+
+
+.logo {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    color: $title-font;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    padding: 9px 22px 10px;
+    border: 2px solid #b7b7b7;
+    position: relative;
+        
+    &::after {
+        position: absolute;
+            content: "travel";
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            padding: 0 16px;
+            background-color: $main-bg;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+        }
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+        outline: none;
+    }
+}
+
+.nav__button {
+    display: none;
+    background-color: $button-main;
+    width: 100%;
+    padding: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $light-font;
+    outline: none;
+}
+
+
+
+
+@media(max-width: 1000px) {
+    .nav {
+        flex-direction: column;
+        padding-top: 15px;
+    }
+
+    .nav__main {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .nav__item {
+        flex-grow: 1;
+    }
+
+    .nav__link {
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+@media(max-width: 720px) {
+
+    .container {
+        padding: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        display: none;
+    }
+    .nav__link {
+        padding: 20px 0;
+        background-color: $nav-tab;
+        color: $light-font;
+        border-top: 2px solid #ffffff;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($nav-tab, 15%);
+            color: $dark-font;
+        }
+
+        &--active {
+            background-color: lighten($nav-tab, 15%);
+            color: $dark-font;
+        }
+    }
+    .nav__button {
+        display: block;
+    }
+}

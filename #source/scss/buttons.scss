@@ -1,0 +1,89 @@
+//Кнопка букинга
+.home__link {
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: $light-font;
+    text-transform: uppercase;
+    background-color: $button-main;
+    padding: 25px 43px;
+    border-radius: 6px;
+    transition: all ease-in 0.25s;
+
+    &:hover,
+    &:focus {
+        background-color: lighten($button-main, 15%);
+        outline: none;
+    }
+
+    &:active {
+        background-color: darken($button-main, 15%);
+        outline: none;
+    }
+}
+
+
+
+// Кнопка галереи
+.tours__more {
+    border: none;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: $light-font;
+    text-transform: uppercase;
+    background-color: $button-main;
+    padding: 25px 60px;
+    border-radius: 6px;
+    box-shadow: 0 0 35px rgba($button-main, 0.7);
+
+    transition: all ease-in 0.25s;
+
+    &:hover,
+    &:focus {
+        background-color: lighten($button-main, 15%);
+        outline: none;
+        box-shadow: 0 0 35px rgba($button-main, 0);
+    }
+
+    &:active {
+        background-color: darken($button-main, 15%);
+        outline: none;
+    }
+}
+
+// Кнопка формы обратной связи
+.form__button {
+    margin: 0 auto;
+    border: none;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: $light-font;
+    text-transform: uppercase;
+    background-color: $button-main;
+    padding: 25px 60px;
+    border-radius: 6px;
+    box-shadow: 0 0 35px rgba($button-main, 0.7);
+
+    transition: all ease-in 0.25s;
+
+    &:hover,
+    &:focus {
+        background-color: lighten($button-main, 15%);
+        outline: none;
+        box-shadow: 0 0 35px rgba($button-main, 0);
+    }
+
+    &:active {
+        background-color: darken($button-main, 15%);
+        outline: none;
+    }
+}
+
+.form__button svg {
+    margin-left: 35px;
+}

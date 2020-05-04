@@ -1,0 +1,128 @@
+.fav {
+    padding: 100px 0 70px;
+    color: $dark-font;
+}
+
+.fav__articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fav__article {
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.fav__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $title-font;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 70px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        background-color: #c2c2c2;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background-color: $title-font;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.fav__info {
+    width: 270px;
+    text-align: justify;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+.fav__img {
+    width: 48%;
+    height: auto;
+}
+
+.fav__subtitle {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 20px; 
+}
+
+.fav__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+
+@media(max-width: 1000px) {
+    .fav__articles {
+        flex-direction: column;
+    }
+
+    .fav__article {
+        width: 100%;
+    }
+
+    .fav__info {
+        width: auto;
+        padding-right: 15px;
+    }
+    
+    .fav__img {
+        width: 32%;
+    }
+
+}
+
+@media(max-width: 720px) {
+
+    
+}
+
+@media(max-width: 600px) {
+    .fav__article {
+        flex-direction: column;
+    }
+    .fav__info {
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .fav__img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .fav__subtitle {
+
+        margin-bottom: 10px; 
+    }
+}
